@@ -1,0 +1,35 @@
+version: "2"
+
+services:
+  node:
+    image: $IMAGE
+    environment:
+      NODE_HOST: node
+      NODE_SERVICE_KEY: bad-secret
+      NODE_BACKEND_HOST: drupal
+    depends_on:
+      - drupal
+
+  drupal:
+    image: wodby/drupal:7-7.1
+    environment:
+      NODE_HOST: node
+      NODE_SERVICE_KEY: bad-secret
+      DRUPAL_VERSION: 7
+      DB_HOST: mariadb
+      DB_USER: drupal
+      DB_PASSWORD: drupal
+      DB_NAME: drupal
+      DB_DRIVER: mysql
+    volumes:
+      - ./tests.sh:/usr/local/bin/tests.sh
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: wodby/mariadb:10.1
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+      MYSQL_DATABASE: drupal
