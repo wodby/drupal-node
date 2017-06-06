@@ -76,7 +76,7 @@
 settings = {
     scheme: '{{ getenv "NODE_SCHEME" "http" }}',
     port: 8080,
-    host: '{{ getenv "NODE_HOST" "node" }}',
+    host: '0.0.0.0',
     resource: '{{ getenv "NODE_RESOURCE" "/socket.io" }}',
     serviceKey: '{{ getenv "NODE_SERVICE_KEY" "" }}',
     backend: {

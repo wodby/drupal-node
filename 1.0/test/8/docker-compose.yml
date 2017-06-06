@@ -4,7 +4,6 @@ services:
   node:
     image: $IMAGE
     environment:
-      NODE_HOST: node
       NODE_SERVICE_KEY: bad-secret
       NODE_BACKEND_HOST: drupal
     depends_on:

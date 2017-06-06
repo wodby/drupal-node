@@ -25,7 +25,6 @@ This image comes with installed [drupal-nodejs](https://github.com/beejeebus/dru
 | NODE_CLIENTS_CAN_WRITE_TO_CLIENTS  | false           | |
 | NODE_CLIENTS_CAN_WRITE_TO_CHANNELS | false           | |
 | NODE_DEBUG                         | 1               | |
-| NODE_HOST                          | node            | |
 | NODE_JS_ETAG                       | true            | |
 | NODE_JS_MINIFICATION               | true            | |
 | NODE_LOG_LEVEL                     | 1               | |
