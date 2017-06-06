@@ -1,7 +1,7 @@
 .PHONY: check-ready check-live
 
 # Used default value from nodejs.config.js
-host ?= node
+host ?= localhost
 max_try ?= 1
 wait_seconds ?= 1
 delay_seconds ?= 0

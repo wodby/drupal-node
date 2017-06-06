@@ -1,4 +1,4 @@
-# NodeJS docker container image for Drupal
+# Node.js docker container image for Drupal
 
 [![Build Status](https://travis-ci.org/wodby/drupal-node.svg?branch=master)](https://travis-ci.org/wodby/drupal-node)
 [![Docker Pulls](https://img.shields.io/docker/pulls/wodby/drupal-node.svg)](https://hub.docker.com/r/wodby/drupal-node)
@@ -7,7 +7,7 @@
 
 ## Overview
 
-This image comes with installed [drupal-nodejs](https://github.com/beejeebus/drupal-nodejs) npm package that is used by [nodejs drupal module](https://www.drupal.org/project/nodejs)
+Server app for the [Node.js Integration Drupal module](https://www.drupal.org/project/nodejs)
 
 ## Supported tags and respective `Dockerfile` links:
 
