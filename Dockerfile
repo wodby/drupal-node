@@ -21,7 +21,7 @@ EXPOSE 8080
 
 WORKDIR /usr/src/app/node_modules/drupal-node.js/
 
-COPY nodejs.config.js.tpl /etc/gotpl/
+COPY templates /etc/gotpl/
 COPY bin /usr/local/bin/
 COPY docker-entrypoint.sh /usr/local/bin/
 

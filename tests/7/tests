@@ -7,7 +7,9 @@ if [[ -n "${DEBUG}" ]]; then
 fi
 
 check_rq() {
-    drush rq --format=json | jq ".\"${1}\".value" | grep -q "${2}"
+    # TODO: remove COLUMNS=0 with drush 8.1.17 travis_release.sh
+    # see https://github.com/drush-ops/drush/issues/3410
+    COLUMNS=0 drush rq --format=json | jq ".\"${1}\".value" | grep -q "${2}"
     echo "OK"
 }
 

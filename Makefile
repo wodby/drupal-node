@@ -20,8 +20,8 @@ build:
 	docker build -t $(REPO):$(TAG) --build-arg DRUPAL_NODE_VER=$(DRUPAL_NODE_VER) ./
 
 test:
-	cd tests/7 && IMAGE=$(REPO):$(TAG) ./run
-	cd tests/8 && IMAGE=$(REPO):$(TAG) ./run
+#	cd tests/7 && IMAGE=$(REPO):$(TAG) ./run.sh
+	cd tests/8 && IMAGE=$(REPO):$(TAG) ./run.sh
 
 push:
 	docker push $(REPO):$(TAG)

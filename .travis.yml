@@ -10,7 +10,7 @@ env:
     - TAG=1.0 DRUPAL_NODE_VER=1.0.10 EXTRA_TAG=1
 
 script:
-  - make && make tests
+  - make && make test
 
 after_success:
-  - . "${TRAVIS_BUILD_DIR}/release"
+  - . "${TRAVIS_BUILD_DIR}/travis_release.sh"
