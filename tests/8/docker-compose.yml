@@ -21,12 +21,12 @@ services:
       DB_NAME: drupal
       DB_DRIVER: mysql
     volumes:
-      - ./tests.sh:/usr/local/bin/tests.sh
+      - ./tests:/usr/local/bin/tests
     depends_on:
       - mariadb
 
   mariadb:
-    image: wodby/mariadb:10.1
+    image: wodby/mariadb
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: drupal

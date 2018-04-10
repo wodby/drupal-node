@@ -1,4 +1,4 @@
-# Node.js docker container image for Drupal
+# Server app for Drupal node.js integration module 
 
 [![Build Status](https://travis-ci.org/wodby/drupal-node.svg?branch=master)](https://travis-ci.org/wodby/drupal-node)
 [![Docker Pulls](https://img.shields.io/docker/pulls/wodby/drupal-node.svg)](https://hub.docker.com/r/wodby/drupal-node)
@@ -11,33 +11,44 @@ Server app [beejeebus/drupal-nodejs](https://github.com/beejeebus/drupal-nodejs)
 
 For generic node image please see [wodby/node](https://github.com/wodby/node).
 
-## Supported tags and respective `Dockerfile` links:
+## Docker Images
 
-- [`1.0`, `latest` (*1.0/Dockerfile*)](https://github.com/wodby/drupal-node/tree/master/1.0/Dockerfile)
+!!! For better reliability we release images with stability tags (`wodby/drupal-node:1.0-X.X.X`) which correspond to [git tags](https://github.com/wodby/drupal-node/releases). We **STRONGLY RECOMMEND** using images only with stability tags. 
 
-## Environment variables available for customization
+About images:
 
-| Environment Variable | Default Value | Description |
-| -------------------- | ------------- | ----------- |
-| NODE_BACKEND_BASE_PATH             |                 | |
-| NODE_BACKEND_HOST                  | php             | |
-| NODE_BACKEND_PORT                  | 80              | |
-| NODE_BACKEND_SCHEME                | http            | |
-| NODE_BASE_AUTH_PATH                |                 | |
-| NODE_CLIENTS_CAN_WRITE_TO_CLIENTS  | false           | |
-| NODE_CLIENTS_CAN_WRITE_TO_CHANNELS | false           | |
-| NODE_DEBUG                         | 1               | |
-| NODE_JS_ETAG                       | true            | |
-| NODE_JS_MINIFICATION               | true            | |
-| NODE_LOG_LEVEL                     | 1               | |
-| NODE_MESSAGE_PATH                  | /nodejs/message | |
-| NODE_RESOURCE                      | /socket.io      | |
-| NODE_SCHEME                        | http            | |
-| NODE_SERVICE_KEY                   |                 | |
-| NODE_SSL_CA_PATH                   |                 | |
-| NODE_SSL_CERT_PATH                 |                 | |
-| NODE_SSL_KEY_PATH                  |                 | |
+* All images are based on Alpine Linux
+* Base image: [node](https://hub.docker.com/r/_/node)
+* [Travis CI builds](https://travis-ci.org/wodby/drupal-node) 
+* [Docker Hub](https://hub.docker.com/r/wodby/drupal-node) 
+
+Supported tags and respective `Dockerfile` links:
+
+* `1`, `1.0`, `latest` [_(Dockerfile)_](https://github.com/wodby/drupal-node/tree/master/Dockerfile)
+
+## Environment variables 
+
+| Variable                             | Default Value     | Description |
+| ------------------------------------ | ----------------- | ----------- |
+| `NODE_BACKEND_BASE_PATH`             |                   |             |
+| `NODE_BACKEND_HOST`                  | `php`             |             |
+| `NODE_BACKEND_PORT`                  | `80`              |             |
+| `NODE_BACKEND_SCHEME`                | `http`            |             |
+| `NODE_BASE_AUTH_PATH`                |                   |             |
+| `NODE_CLIENTS_CAN_WRITE_TO_CLIENTS`  | `false`           |             |
+| `NODE_CLIENTS_CAN_WRITE_TO_CHANNELS` | `false`           |             |
+| `NODE_DEBUG`                         | `1`               |             |
+| `NODE_JS_ETAG`                       | `true`            |             |
+| `NODE_JS_MINIFICATION`               | `true`            |             |
+| `NODE_LOG_LEVEL`                     | `1`               |             |
+| `NODE_MESSAGE_PATH`                  | `/nodejs/message` |             |
+| `NODE_RESOURCE`                      | `/socket.io`      |             |
+| `NODE_SCHEME`                        | `http`            |             |
+| `NODE_SERVICE_KEY`                   |                   |             |
+| `NODE_SSL_CA_PATH`                   |                   |             |
+| `NODE_SSL_CERT_PATH`                 |                   |             |
+| `NODE_SSL_KEY_PATH`                  |                   |             |
 
 ## Complete Drupal stack
 
-To get full docker-based Drupal stack see [Docker4Drupal](https://github.com/wodby/docker4drupal).
+See [Docker4Drupal](https://github.com/wodby/docker4drupal)

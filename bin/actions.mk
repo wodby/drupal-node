@@ -9,7 +9,7 @@ delay_seconds ?= 0
 default: check-ready
 
 check-ready:
-	wait-for-node.sh $(host) $(max_try) $(wait_seconds) $(delay_seconds)
+	wait_for_node $(host) $(max_try) $(wait_seconds) $(delay_seconds)
 
 check-live:
 	@echo "OK"
