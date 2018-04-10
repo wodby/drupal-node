@@ -7,7 +7,9 @@
 
 ## Overview
 
-Server app for the [Node.js Integration Drupal module](https://www.drupal.org/project/nodejs)
+Server app [beejeebus/drupal-nodejs](https://github.com/beejeebus/drupal-nodejs) for the [Node.js Integration Drupal module](https://www.drupal.org/project/nodejs)
+
+For generic node image please see [wodby/node](https://github.com/wodby/node).
 
 ## Supported tags and respective `Dockerfile` links:
 
