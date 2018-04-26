@@ -12,6 +12,7 @@ services:
   drupal:
     image: wodby/drupal:7-7.1
     environment:
+      DEBUG: 1
       NODE_HOST: node
       NODE_SERVICE_KEY: bad-secret
       DRUPAL_VERSION: 7
