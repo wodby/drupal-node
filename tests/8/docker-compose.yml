@@ -21,7 +21,7 @@ services:
       DB_NAME: drupal
       DB_DRIVER: mysql
     volumes:
-      - ./tests:/usr/local/bin/tests
+      - ./tests.sh:/usr/local/bin/tests.sh
     depends_on:
       - mariadb
 

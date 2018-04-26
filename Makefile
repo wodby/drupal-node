@@ -1,3 +1,4 @@
+NODE_VER ?= 8.11
 DRUPAL_NODE_VER ?= 1.0.10
 DRUPAL_NODE_VER_MINOR ?= $(shell echo "${DRUPAL_NODE_VER}" | grep -oE '^[0-9]+\.[0-9]+')
 
@@ -5,6 +6,7 @@ REPO = wodby/drupal-node
 NAME = drupal-node-$(DRUPAL_NODE_VER_MINOR)
 
 TAG ?= $(DRUPAL_NODE_VER_MINOR)
+BASE_IMAGE_TAG = $(NODE_VER)-0.2.0
 
 ifneq ($(STABILITY_TAG),)
     ifneq ($(TAG),latest)
@@ -17,10 +19,13 @@ endif
 default: build
 
 build:
-	docker build -t $(REPO):$(TAG) --build-arg DRUPAL_NODE_VER=$(DRUPAL_NODE_VER) ./
+	docker build -t $(REPO):$(TAG) \
+		--build-arg BASE_IMAGE_TAG=$(BASE_IMAGE_TAG) \
+		--build-arg DRUPAL_NODE_VER=$(DRUPAL_NODE_VER) \
+		./
 
 test:
-#	cd tests/7 && IMAGE=$(REPO):$(TAG) ./run.sh
+	cd tests/7 && IMAGE=$(REPO):$(TAG) ./run.sh
 	cd tests/8 && IMAGE=$(REPO):$(TAG) ./run.sh
 
 push:

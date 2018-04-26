@@ -18,7 +18,7 @@ For generic node image please see [wodby/node](https://github.com/wodby/node).
 About images:
 
 * All images are based on Alpine Linux
-* Base image: [node](https://hub.docker.com/r/_/node)
+* Base image: [wodby/node](https://github.com/wodby/node)
 * [Travis CI builds](https://travis-ci.org/wodby/drupal-node) 
 * [Docker Hub](https://hub.docker.com/r/wodby/drupal-node) 
 
